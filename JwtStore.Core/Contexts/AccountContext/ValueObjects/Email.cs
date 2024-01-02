@@ -26,7 +26,11 @@ namespace JwtStore.Core.Contexts.AccountContext.ValueObjects
 
         public string Hash => Address.ToBase64();
 
+        public Verification Verification { get; private set; } = new();
 
+        public  void ResendVerification() => Verification = new Verification();
+
+        
 
         public static implicit operator string(Email email) => email.ToString();
 

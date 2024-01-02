@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using JwtStore.Core.Contexts.AccountContext.ValueObjects;
+using JwtStore.Core.Contexts.SharedContext.Entities;
 
-namespace JwtStore.Core.AccountContext.Entities
+namespace JwtStore.Core.Contexts.AccountContext.Entities
 {
-    internal class User
+    public class User : Entity
     {
+        public Email Email { get; private set; }
+
     }
 }
